@@ -3,40 +3,27 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Representa un Rover de exploración marciana capaz de desplazarse en un
- * plano cartesiano de dos ejes, detectar fugas de calor antes de moverse y
- * administrar su propia potencia (medida en una aleación de níquel y
- * cobalto).
- *
- * <p>Cada mandato recibido (desplazamiento o recarga) queda registrado con
- * fecha y hora, tipo y estatus, ya sea en la lista de mandatos exitosos o en
- * la de mandatos no posibles.
- */
+
 public class Rover {
 
-  // ===========================================================
-  // Constantes de dominio (reglas fijas para todos los Rovers)
-  // ===========================================================
+ 
 
-  /** Unidades de aleación que consume cualquier desplazamiento. */
+ 
   public static final double COSTO_DESPLAZAMIENTO = 0.5;
 
-  /** Unidades de aleación que consume cada detección de fuga de calor. */
+
   public static final double COSTO_DETECCION = 0.25;
 
-  /** Potencia inicial por omisión cuando no se indica una al crear el Rover. */
+
   public static final double POTENCIA_DEFECTO = 100.0;
 
-  /** Cantidad máxima de recargas permitidas para un mismo Rover. */
+  
   public static final int MAX_RECARGAS = 5;
 
-  /** Umbral a partir del cual el número aleatorio generado indica fuga de calor. */
+ 
   public static final double UMBRAL_FUGA = 0.5;
 
-  // ===========================================================
-  // Atributos estáticos (compartidos por todos los Rovers)
-  // ===========================================================
+
 
   /** Cantidad total de Rovers creados hasta el momento. */
   private static int contadorRovers = 0;
